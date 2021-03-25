@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Styling forms with css and making search bars"> 
+    <title>Demo - Styling Forms</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <!-- <h1><img src="img/logo.jpg" alt="Company Logo"></h1> -->
+        <div class="flex-container">
+            <h1 class="sr-only">Company Name</h1>
+            <img src="img/logo.jpg" alt="Company Logo">
+            <button class="menu-button">Menu</button>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#">Articles</a></li>
+                <li><a href="#">Guides</a></li>
+                <li><a href="#">Books</a></ li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Memberships</a></li>
+            </ul>
+        </nav>
+        <form action="#" method="GET" role="search">
+            <label class="sr-only" for="search">Search Bar</label>
+            <input type="text" id="search" placeholder="Search">
+        </form>
+    </header>
+    <section>
+        <h2>Log In</h2>
+        <form class="login-form" action="#" method="POST">
+            <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" autofocus required>
+            </div>
+            <div>
+                <label for="pass">Password</label>
+                <p>Passwords must container an uppercase letter, a lower case letter, a number, a special character , and be at least 8 characters in length</p>
+                <input type="password" id="pass" autocomplete="off" required pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
+            </div>
+            <div>
+                <input type="submit" value="Sign in">
+            </div>
+        </form>
+    </section>
+    <script src="js/main.js"></script>
+</body>
+</html>
